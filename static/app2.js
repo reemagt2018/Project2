@@ -12,17 +12,17 @@
 
 // Designate the height of the graph
  //var height = width - width / 3.9 ;
- var height = 600
+ var height = 400
 
 // Margin spacing for graph
  var margin = 20;
 
 // space for placing words
-var labelArea = 110;
+var labelArea = 80;
 
 // padding for the text at the bottom and left axes
-var tPadBot = 40;
-var tPadLeft = 40;
+var tPadBot = 20;
+var tPadLeft = 20;
 
 // Create the actual canvas for the graph
 var svg = d3

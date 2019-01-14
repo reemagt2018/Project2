@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Best Tech Friendly Cities </title>
+  <title>Best Techology Friendly Cities </title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -51,34 +51,24 @@
     <div class="row">
       <div class="col-md-2">
         <div class="well">
-          <h5>SELECT Cities:</h5>
-          <select name=“city” method=“GET” action=“/”>
-           <option value=“{{city[0]}}” selected>{{city[0]}}</option>
-           {% for city in city[1:] %}
-             <option value=“{{city}}“>{{city}}</option>
-           {% endfor %}
-         </select>
-         </select>
+          <h5>Select Cities:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Measurable Features Ratings for the Eligible Cities</h3>
+            <h3 class="panel-title">Sample MetaData</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
-          <ul>
-            <li>Business Friendliness</li>
-            <li>Education</li>
-            <li>Mobile Coverage</li>
-            <li>Diversity</li>
-            <li>Population</li>
-            <li>Transit</li>
-
-           </ul>
-
         </div>
       </div>
       <div class="col-md-10">
         <div id="map"></div>
+      </div>
+    </div>
+    <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+        <div id="scatter"></div>
       </div>
     </div>
     </div>
@@ -86,10 +76,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-         <div id="scatter"></div>
+         <div id="map"></div>
        </div>
     </div>
     </div>
+    </div>
+
+
+
+
 
 
 
@@ -118,8 +113,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript" src='../static/app.js?'" + i + "></script>
 <script type="text/javascript" src='../static/app2.js?'" + i + "></script>
+
 
 </body>
 
